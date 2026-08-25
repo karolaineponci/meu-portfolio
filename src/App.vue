@@ -11,15 +11,15 @@
         
         <!-- Ícones de Contato -->
         <div class="social-links">
-          <a href="#" class="icon">GitHub</a>
-          <a href="#" class="icon">LinkedIn</a>
-          <a href="#" class="icon">Instagram</a>
+          <a href="https://github.com/karolaineponci"target="_blank" class="icon"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/karolaine-ponci-84a94b2a0"target="_blank" class="icon"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://instagram.com/karolaineponci"target="_blank" class="icon"><i class="fa-brands fa-instagram"></i></a>
         </div>
       </div>
       
       <div class="hero-image">
         <!-- Substitua pelo caminho da sua foto -->
-        <img src="#" alt="Minha Foto" />
+        <img src="./img/IMG_6322.jpg" alt="Minha Foto" />
       </div>
     </header>
 
@@ -104,6 +104,7 @@ h1 {
   height: 200px;
   border-radius: 20px;
   border: 2px solid #334155;
+  object-fit: cover;
 }
 
 /* Grid para os Cards tipo "Bento Box" */
@@ -142,4 +143,23 @@ h1 {
   border-radius: 6px;
   font-family: monospace;
 }
+
+.social-links {
+  display: flex;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.icon {
+  color: #10b981; /* Verde tech combinando com a tag */
+  font-size: 2rem; /* Aumenta o tamanho do ícone */
+  text-decoration: none;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.icon:hover {
+  color: #e2e8f0; /* Fica branco ao passar o mouse */
+  transform: translateY(-5px); /* Dá um pulinho pra cima */
+}
+
 </style>
