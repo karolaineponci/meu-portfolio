@@ -73,7 +73,7 @@ const meusProjetos = ref([
     titulo: 'Blog de Viagens',
     descricao: 'Website focado em experiência de uso para leitores, trazendo postagens, relatos de viagens e interface responsiva.',
     tecnologias: ['HTML5', 'CSS3', 'Web Design'],
-    imagem: './src/img/guiadeviagem.png', // Substitua pelo print do seu blog
+    imagem: './public/guiadeviagem.png', // Substitua pelo print do seu blog
     github: 'https://github.com/karolaineponci/blog-html-css-js',
     link: 'https://karolaineponci.github.io/blog-html-css-js/'
   },
@@ -81,7 +81,7 @@ const meusProjetos = ref([
     titulo: 'Dashboard de Vendas com Streamlit',
     descricao: 'Painel interativo para análise visual e acompanhamento de dados de vendas utilizando Python e a biblioteca Streamlit.',
     tecnologias: ['Python', 'Streamlit', 'Data Viz'],
-    imagem: './src/img/dashboardSTREAM.png', // Substitua pelo print do dashboard
+    imagem: './public/dashboardSTREAM.png', // Substitua pelo print do dashboard
     github: 'https://github.com/karolaineponci/karolaine-ponci-streamlit', 
     link: 'https://karolaine-ponci.streamlit.app/'
   }
