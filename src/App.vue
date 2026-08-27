@@ -65,7 +65,7 @@ const meusProjetos = ref([
     titulo: 'TaskFlow | Gerenciador de Tarefas',
     descricao: 'Aplicação web interativa para gerenciar, editar e acompanhar o progresso de atividades de forma intuitiva.',
     tecnologias: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
-    imagem: 'https://via.placeholder.com/400x220/1e293b/10b981?text=TaskFlow', // Substitua pelo caminho do print ex: '/assets/taskflow.png'
+    imagem: '/taskflow.png', // Substitua pelo caminho do print ex: '/assets/taskflow.png'
     github: 'https://github.com/karolaineponci',
     link: '#'
   },
