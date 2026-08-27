@@ -3,8 +3,9 @@
     <!-- SEÇÃO HERO (Apresentação e Foto) -->
     <header class="hero">
       <div class="hero-content">
-        <p class="tagline">Olá, mundo! Eu sou um</p>
-        <h1>Desenvolvedor & Entusiasta de Tecnologia</h1>
+        <p class="tagline">Olá, mundo! Eu sou a</p>
+        <h1>Karolaine <span class="highlight">Ponci</span></h1>
+        <h2>Desenvolvedora & Entusiasta de Tecnologia</h2>
         <p class="resumo">
           Estudante de tecnologia com foco em criar soluções eficientes, desde o desenvolvimento web até a infraestrutura e segurança de sistemas. Sempre em busca de novos desafios e aprendizados práticos.
         </p>
@@ -28,14 +29,26 @@
       <h2>Trabalhos Recentes</h2>
       
       <div class="cards-grid">
-        <!-- O Vue usa v-for para criar os cards automaticamente com base nos seus dados -->
         <div class="card" v-for="(projeto, index) in meusProjetos" :key="index">
-          <h3>{{ projeto.titulo }}</h3>
-          <p>{{ projeto.descricao }}</p>
-          <div class="tech-tags">
-            <span v-for="tech in projeto.tecnologias" :key="tech" class="tag">
-              {{ tech }}
-            </span>
+          <!-- Imagem do Projeto -->
+          <div class="card-image-wrapper">
+            <img :src="projeto.imagem" :alt="projeto.titulo" class="card-img" />
+          </div>
+
+          <div class="card-body">
+            <h3>{{ projeto.titulo }}</h3>
+            <p>{{ projeto.descricao }}</p>
+            
+            <div class="tech-tags">
+              <span v-for="tech in projeto.tecnologias" :key="tech" class="tag">
+                {{ tech }}
+              </span>
+            </div>
+
+            <div class="card-links">
+              <a :href="projeto.github" target="_blank" title="Ver no GitHub"><i class="fa-brands fa-github"></i> Código</a>
+              <a v-if="projeto.link && projeto.link !== '#'" :href="projeto.link" target="_blank" title="Ver Projeto"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+            </div>
           </div>
         </div>
       </div>
@@ -50,18 +63,27 @@ import { ref } from 'vue';
 const meusProjetos = ref([
   {
     titulo: 'TaskFlow | Gerenciador de Tarefas',
-    descricao: 'Aplicação web para gerenciar, editar e acompanhar o progresso de atividades de forma intuitiva.',
-    tecnologias: ['HTML', 'CSS', 'JavaScript', 'Bootstrap']
+    descricao: 'Aplicação web interativa para gerenciar, editar e acompanhar o progresso de atividades de forma intuitiva.',
+    tecnologias: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
+    imagem: 'https://via.placeholder.com/400x220/1e293b/10b981?text=TaskFlow', // Substitua pelo caminho do print ex: '/assets/taskflow.png'
+    github: 'https://github.com/karolaineponci',
+    link: '#'
   },
   {
-    titulo: 'Discretização e Análise de Dados',
-    descricao: 'Script para processamento de arquivos CSV, realizando limpeza de dados e discretização de variáveis como idades.',
-    tecnologias: ['Python', 'Data Analysis']
+    titulo: 'Blog de Viagens',
+    descricao: 'Website focado em experiência de uso para leitores, trazendo postagens, relatos de viagens e interface responsiva.',
+    tecnologias: ['HTML5', 'CSS3', 'Web Design'],
+    imagem: './src/img/guiadeviagem.png', // Substitua pelo print do seu blog
+    github: 'https://github.com/karolaineponci/blog-html-css-js',
+    link: 'https://karolaineponci.github.io/blog-html-css-js/'
   },
   {
-    titulo: 'Conformidade e Defesa de Redes',
-    descricao: 'Investigação de requisitos e implementação de medidas de segurança (normas HIPAA) em laboratório de redes.',
-    tecnologias: ['Cybersecurity', 'Infraestrutura']
+    titulo: 'Dashboard de Vendas com Streamlit',
+    descricao: 'Painel interativo para análise visual e acompanhamento de dados de vendas utilizando Python e a biblioteca Streamlit.',
+    tecnologias: ['Python', 'Streamlit', 'Data Viz'],
+    imagem: './src/img/dashboardSTREAM.png', // Substitua pelo print do dashboard
+    github: 'https://github.com/karolaineponci/karolaine-ponci-streamlit', 
+    link: 'https://karolaine-ponci.streamlit.app/'
   }
 ]);
 </script>
@@ -93,6 +115,17 @@ h1 {
   margin: 10px 0;
 }
 
+.highlight {
+  color: #10b981;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #94a3b8;
+  margin-top: -5px;
+  margin-bottom: 15px;
+}
+
 .resumo {
   max-width: 500px;
   color: #94a3b8;
@@ -116,10 +149,12 @@ h1 {
 }
 
 .card {
-  background-color: #1e293b; /* Fundo do card um pouco mais claro que o fundo da página */
-  padding: 25px;
+  background-color: #1e293b;
   border-radius: 12px;
   border: 1px solid #334155;
+  overflow: hidden; /* Garante que a imagem respeite as bordas arredondadas */
+  display: flex;
+  flex-direction: column;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
@@ -127,6 +162,54 @@ h1 {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   border-color: #10b981; /* Destaque verde ao passar o mouse */
+}
+
+.card-image-wrapper {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  background-color: #0f172a;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-img {
+  transform: scale(1.05); /* Leve zoom na imagem ao passar o mouse */
+}
+
+.card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #334155;
+}
+
+.card-links a {
+  color: #10b981;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.2s;
+}
+
+.card-links a:hover {
+  color: #ffffff;
 }
 
 .tech-tags {
