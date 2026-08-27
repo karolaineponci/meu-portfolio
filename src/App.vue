@@ -66,8 +66,8 @@ const meusProjetos = ref([
     descricao: 'Aplicação web interativa para gerenciar, editar e acompanhar o progresso de atividades de forma intuitiva.',
     tecnologias: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
     imagem: '/taskflow.png', // Substitua pelo caminho do print ex: '/assets/taskflow.png'
-    github: 'https://github.com/karolaineponci',
-    link: '#'
+    github: 'https://github.com/karolaineponci/taskflow-atividadeDW',
+    link: 'https://karolaineponci.github.io/taskflow-atividadeDW/tarefas.html'
   },
   {
     titulo: 'Blog de Viagens',
