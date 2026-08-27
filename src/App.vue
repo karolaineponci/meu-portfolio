@@ -67,7 +67,7 @@ const meusProjetos = ref([
     tecnologias: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
     imagem: '/taskflow.png', // Substitua pelo caminho do print ex: '/assets/taskflow.png'
     github: 'https://github.com/karolaineponci/taskflow-atividadeDW',
-    link: 'https://karolaineponci.github.io/taskflow-atividadeDW/tarefas.html'
+    link: 'https://karolaineponci.github.io/taskflow-atividadeDW/index.html'
   },
   {
     titulo: 'Blog de Viagens',
