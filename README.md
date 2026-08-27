@@ -1,44 +1,25 @@
-# meu-portfolio
+# 👩‍💻 Meu Portfólio Pessoal
 
-This template should help get you started developing with Vue 3 in Vite.
+Bem-vindo(a) ao repositório do meu portfólio! Este projeto foi desenvolvido para apresentar meus trabalhos, projetos acadêmicos e minha evolução na área de tecnologia.
 
-## Recommended IDE Setup
+## 🛠️ Tecnologias Utilizadas
+* **Vue.js 3** (com Vite)
+* **HTML5 & CSS3**
+* **JavaScript**
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## 🚀 Projetos em Destaque
+* **TaskFlow**: Gerenciador de tarefas.
+* **Blog de Viagens**: Interface focada na experiência do usuário.
+* **Dashboard de Vendas**: Painel interativo com Python e Streamlit.
 
-## Recommended Browser Setup
+## 💻 Como rodar este projeto localmente
+```bash
+# 1. Clone o repositório:
+git clone [https://github.com/karolaineponci/meu-portfolio.git](https://github.com/karolaineponci/meu-portfolio.git)
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+# 2. Instalar as dependências
+bun install
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
+# 3. Rodar o servidor backend
+bun run dev
 ```
