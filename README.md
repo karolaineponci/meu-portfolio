@@ -13,7 +13,13 @@ Bem-vindo(a) ao repositório do meu portfólio! Este projeto foi desenvolvido pa
 * **Dashboard de Vendas**: Painel interativo com Python e Streamlit.
 
 ## 💻 Como rodar este projeto localmente
-
-1. Clone o repositório:
 ```bash
+# 1. Clone o repositório:
 git clone [https://github.com/karolaineponci/meu-portfolio.git](https://github.com/karolaineponci/meu-portfolio.git)
+```bash
+# 2. Instalar as dependências
+bun install
+
+# 3. Rodar o servidor backend
+bun run dev
+```
